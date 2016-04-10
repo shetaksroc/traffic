@@ -1,0 +1,56 @@
+  <!DOCTYPE html>
+  <head>
+    <title></title>
+  </head>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script>
+
+
+  function fun1()
+  {
+  	    //$("#image").attr("src", "final_out.jpeg");
+  	    var img=document.getElementById("image");
+  	$.get("send_json.php", function(data, status) {
+           alert(data);
+            data=String(data);
+            $("#image").attr("src", data);
+
+        });
+
+  	/*$.ajax({  
+    type: 'GET',
+    url: 'send_json.php',   
+    //data: {st:11, wd: 1,wn:2,hr:1,mn:30 },
+
+    success: function(response) {
+        alert(response);
+        
+    }
+});*/
+  /*<?php
+  $data = array(12, 2, 11,0,1);
+	$result= shell_exec('python traffic_prediction.py ' . escapeshellarg(json_encode($data)));  
+
+
+	?>
+
+
+var temp = <?php echo json_encode($result); ?>;
+
+alert(temp);*/
+
+  }
+
+ 
+  </script>
+
+
+  <body onload="fun1()">
+  <img id="image"></img>
+
+  </body>
+  </html>
