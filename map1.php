@@ -46,7 +46,7 @@ include 'header.php';
 		<div class="row">
 		<div class="ui-widget form-group">
 		<div class="col-md-2"><h4>Route</h4></div>
-		<div class="col-md-5">
+		<div class="col-md-4">
 		<br>
 			<select name="route" id="route" class="form-control floating-label">
 			<option selected="selected" value="null">Select Route</option>
@@ -118,14 +118,11 @@ include 'header.php';
 				</div>
 			</div>
 		
-		
-		
-		
 		<div class="row">
 		
 			<div class="col-md-2 col-md-offset-3">
 			<input class="form-control btn btn-success" name="submit"  onclick="fun1()" type="submit" value="Get Map">
-			<!--<button id="butt" class="form-control btn btn-primary">Submit</button>-->
+			
 			</div>
 			 <div class="col-md-2"><button type="reset" class="btn btn-warning">Reset Button</button>
 			</div>
@@ -136,15 +133,15 @@ include 'header.php';
 	  </div>
 	  
   
-	<button onclick="fun1()">Click</button>
+	<!--<button onclick="fun1()">Click</button>-->
 	<img id="image" height="400" width="400"></img> 
 	<script>
-  function fun()
+  /*function fun()
   {
 	  var e = document.getElementById("route");
 	  var strUser = e.options[e.selectedIndex].value;
 	  alert(strUser);
-  }
+  }*/
   
   </script>
     </div>
@@ -163,13 +160,13 @@ include 'header.php';
 <link rel="stylesheet" type="text/css" href="css/jquery.ptTimeSelect.css" />
 <link href="css/timepicki.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.ptTimeSelect.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/timepicki.js"></script>
 
         <script>
 		$('#time').ptTimeSelect();
-		$( "#date" ).datepicker();
+		$("#date").datepicker({ dateFormat: 'yy-mm-dd' });
 		</script>
 </body>
 
