@@ -19,7 +19,7 @@ except:
 # Generate some data to send to PHP
 
 #results=[]
-with open('test/23.csv','r') as csv1:	
+with open('test/'+str(data[0])+'.csv','r') as csv1:	
 		spamreader = csv.reader(csv1, delimiter=';', quotechar='|')
 		
 		a=[]
@@ -38,7 +38,7 @@ with open('test/test_data.csv','w') as csv2:
 				
 		#print(l[5],l[6],l[7],wk,week_number)
 			
-			spamwriter.writerow([int(data[0]),float(a[i][0]),float(a[i][1]),int(a[i][2]),int(a[i][3]),int(data[4]),int(data[1]),int(data[2]),int(data[3])])
+			spamwriter.writerow([int(data[0]),float(a[i][0]),float(a[i][1]),int(a[i][2]),int(a[i][3]),int(data[1]),int(data[2]),int(data[3]),int(data[4])])
 #l=[]
 #l=json.decode(data)
 # Send it to stdout (to PHP)'''
@@ -191,7 +191,7 @@ img=cv2.imread("out3.jpeg")
 #print 8																																																																																																																																																																																																		
 c=0
 for m in l:																																																																																																																																																																																																																																																			 																																																																																																																																																																																																																																																																											
-	if(m[0]==23):
+	if(m[0]==int(data[0])):
 			
 		for k in m[3]:	
 			#print(img[k[3],k[2]])\
