@@ -25,34 +25,18 @@ $(function() {
   {
   	    //$("#image").attr("src", "final_out.jpeg");
   	    var img=document.getElementById("image");
-  	$.get("send_json.php", function(data, status) {
+  	    var e = document.getElementById("route");
+		var route = e.options[e.selectedIndex].value;
+		var date = document.getElementById("date").value;
+		var time = document.getElementById("time").value;
+
+  	$.post("send_json.php",{"route" : route, "date" : date , "time" : time}, function(data, status) {
            alert(data);
             data=String(data);
             $("#image").attr("src", data);
+            
 
         });
-
-  	/*$.ajax({  
-    type: 'GET',
-    url: 'send_json.php',   
-    //data: {st:11, wd: 1,wn:2,hr:1,mn:30 },
-
-    success: function(response) {
-        alert(response);
-        
-    }
-});*/
-  /*<?php
-  $data = array(12, 2, 11,0,1);
-	$result= shell_exec('python traffic_prediction.py ' . escapeshellarg(json_encode($data)));  
-
-
-	?>
-
-
-var temp = <?php echo json_encode($result); ?>;
-
-alert(temp);*/
 
   }
 
@@ -100,7 +84,7 @@ alert(temp);*/
                     <?php
                         $dbHost = 'localhost';
 						$dbUsername = 'root';
-						$dbPassword = 'root!';
+						$dbPassword = 'root';
 						$dbName = 'traffic';
 						$con = mysqli_connect($dbHost,$dbUsername,$dbPassword,$dbName);
 						if (mysqli_connect_errno())
@@ -152,7 +136,7 @@ alert(temp);*/
 			
 				<div class="col-md-4">
 					<div class="form-control-wrapper">
-						<input type="text" id="date" name="date" class="form-control floating-label" placeholder=""/>
+						<input autocomplete="off" type="text" id="date" name="date" class="form-control floating-label" placeholder=""/>
 					</div>
 				</div>
 				</div>
@@ -183,7 +167,7 @@ alert(temp);*/
 			
 				<div class="col-md-4">
 					<div class="form-control-wrapper">
-						<input type="text" id="time" name="time" class="form-control floating-label" placeholder="">
+						<input autocomplete="off" type="text" id="time" name="time" class="form-control floating-label" placeholder="">
 					</div>
 				</div>
 				</div>
@@ -234,105 +218,15 @@ alert(temp);*/
 <link rel="stylesheet" type="text/css" href="css/jquery.ptTimeSelect.css" />
 <link href="css/timepicki.css" rel="stylesheet">
 <link rel="stylesheet" href="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/css/material.min.css" />
-<link rel="stylesheet" href="css/bootstrap-material-datetimepicker.css">
-
-<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-<link rel="stylesheet" href="./build/css/timepicker.css" type="text/css" media="all" />
 <script type="text/javascript" src="js/jquery.ptTimeSelect.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="js/timepicki.js"></script>
-<script type="text/javascript" src="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/js/material.min.js"></script>
-<script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
-<script src="js/bootstrap-material-datetimepicker.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<!--<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css"/>-->
-<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
-<script src="js/timepicker.js" type="text/javascript" charset="utf-8"></script>
+
         <script>
 		$('#time').ptTimeSelect();
 		$( "#date" ).datepicker();
 		</script>
-<script type="text/javascript">
-		/*$(document).ready(function()
-		{
-			$('#date').bootstrapMaterialDatePicker
-			({
-				time: false,
-				clearButton: true
-			});
-
-			$('#time').bootstrapMaterialDatePicker
-			({
-				date: false,
-				shortTime: false,
-				format: 'HH:mm'
-			});
-
-			$('#date-format').bootstrapMaterialDatePicker
-			({
-				format: 'dddd DD MMMM YYYY - HH:mm'
-			});
-			$('#date-fr').bootstrapMaterialDatePicker
-			({
-				format: 'DD/MM/YYYY HH:mm',
-				lang: 'fr',
-				weekStart: 1, 
-				cancelText : 'ANNULER',
-				nowButton : true,
-				switchOnClick : true
-			});
-
-			$('#date-end').bootstrapMaterialDatePicker
-			({
-				weekStart: 0, format: 'DD/MM/YYYY HH:mm'
-			});
-			$('#date-start').bootstrapMaterialDatePicker
-			({
-				weekStart: 0, format: 'DD/MM/YYYY HH:mm', shortTime : true
-			}).on('change', function(e, date)
-			{
-				$('#date-end').bootstrapMaterialDatePicker('setMinDate', date);
-			});
-
-			$('#min-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY HH:mm', minDate : new Date() });
-
-			$.material.init()
-		});*/
-		</script>
-<script>
-
-/*$(document).ready(function(){
-    $("#home").ajaxStart(function(){
-        $("#wait").css("display", "block");
-    });
-    $("#home").ajaxComplete(function(){
-		setTimeout(function(){
-          $("#wait").css("display", "none");
-		  $("#home").css("display", "none");
-		  
-       }, 2000);
-        
-    });
-    $("#butt").click(function(){
-		setTimeout(function(){
-		$("#txt").load("image.php");
-		},1000);
-        
-    });
-});*/
-</script>
-
-    <script>
-	$('#timepicker1').timepicki();
-	$('#sample3 input').ptTimeSelect({
-	containerClass: "timeCntr",
-	containerWidth: "350px",
-	setButtonLabel: "Select",
-	minutesLabel: "min",
-	hoursLabel: "Hrs"
-});
-    </script>
 </body>
 
 

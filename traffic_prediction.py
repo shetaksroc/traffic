@@ -11,7 +11,7 @@ from sklearn.externals import joblib
 # Load the data that PHP sent us
 try:
     data =  json.loads(sys.argv[1])
-    #print "out2.jpeg"
+    print "out2.jpeg"
 except:
     print "ERROR"
     sys.exit(1)
@@ -52,9 +52,9 @@ cols = ['st', 'lat', 'long', 'y','x','weekno','weekday','hr','min']
 colsRes = ['pixel']
 #with open('model/m1', 'wb') as f:
  #   cPickle.dump(rf, f)
-#print 10
+print 10
 test = pd.read_csv("test/test_data.csv")
-#print 11
+print 11
 testArr = test.as_matrix(cols)
 #print 5
 results = rf.predict(testArr)
