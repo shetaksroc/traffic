@@ -136,7 +136,7 @@
                         +    '            <div id="ptTimeSelectUserTime" style="float: left;">'
                         +    '                <span id="ptTimeSelectUserSelHr">1</span> : '
                         +    '                <span id="ptTimeSelectUserSelMin">00</span> '
-                        +    '                <span id="ptTimeSelectUserSelAmPm">AM</span>'
+                        +    '                <span style="display:none;" id="ptTimeSelectUserSelAmPm">AM</span>'
                         +    '            </div>'
                         +    '            <br style="clear: both;" /><div></div>'
                         +    '        </div>'
@@ -249,7 +249,7 @@
         if (    h.toLowerCase() == "am"
             ||  h.toLowerCase() == "pm"
         ) {
-            jQuery('#ptTimeSelectUserSelAmPm').empty().append(h);
+           // jQuery('#ptTimeSelectUserSelAmPm').empty().append(h);
         } else {
             jQuery('#ptTimeSelectUserSelHr').empty().append(h);
         }
@@ -279,8 +279,8 @@
         var tSel = jQuery('#ptTimeSelectUserSelHr').text()
                     + ":"
                     + jQuery('#ptTimeSelectUserSelMin').text()
-                    + " "
-                    + jQuery('#ptTimeSelectUserSelAmPm').text();
+                    + " ";
+                   // + jQuery('#ptTimeSelectUserSelAmPm').text();
         jQuery(".isPtTimeSelectActive").val(tSel);
         this.closeCntr();
         

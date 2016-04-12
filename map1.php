@@ -2,48 +2,31 @@
 
 include 'header.php'; 
 
-//$data = array(12, 2, 11,0,1);
-//echo shell_exec('python traffic_prediction.py ' . escapeshellarg(json_encode($data)));
 ?>
 <script>
 
+	  function fun1()
+	  {
+	  	    //$("#image").attr("src", "final_out.jpeg");
+	  	    var img=document.getElementById("image");
+	  	    var e = document.getElementById("route");
+			var route = e.options[e.selectedIndex].value;
+			var date = document.getElementById("date").value;
+			var time = document.getElementById("time").value;
 
-$(function() {
-    $( "#datepicker" ).datepicker();
-  });
-  
-  $(function() {
-    
-    $( "#tags1" ).autocomplete({
-      source: 'search1.php'
-    });
-	$( "#tags2" ).autocomplete({
-      source: 'search2.php'
-    });
-  });
-  function fun1()
-  {
-  	    //$("#image").attr("src", "final_out.jpeg");
-  	    var img=document.getElementById("image");
-  	    var e = document.getElementById("route");
-		var route = e.options[e.selectedIndex].value;
-		var date = document.getElementById("date").value;
-		var time = document.getElementById("time").value;
+	  	$.post("send_json.php",{"route" : route, "date" : date , "time" : time}, function(data, status) {
+	           alert(data);
+	            data=String(data);
+	            $("#image").attr("src", data);
+	            
 
-  	$.post("send_json.php",{"route" : route, "date" : date , "time" : time}, function(data, status) {
-           alert(data);
-            data=String(data);
-            $("#image").attr("src", data);
-            
+	        });
 
-        });
-
-  }
+	  }
 
  
   </script>
-  
-  
+
 <body>	
 <div class="container">
   <h2>Traffic Prediction</h2>
@@ -59,21 +42,7 @@ $(function() {
 	  <div class="panel panel-info">
       <form role="form" action="">
       <div class="panel-body">
-	 <!-- <div class="row">
-	  <div class="mdl-textfield mdl-js-textfield mdl-textfield-floating-label">
-                <input class="mdl-textfield__input" type="text" id="bind-one" />
-                <label class="mdl-textfield__label" for="bind-one">Bind Test One</label>
-            </div>
-	  </div>-->
-	  
-	  
-	  
-		<!--<div class="row">
-		<div class="ui-widget form-group">
-			<div class="col-md-2"><h4 for="tags1">Route</h4></div>
-			<div class="col-md-4"><input name="route" class="form-control" id="tags1" /></div>
-		</div>
-		</div>-->
+	
 		<div class="row">
 		<div class="ui-widget form-group">
 		<div class="col-md-2"><h4>Route</h4></div>
@@ -119,14 +88,6 @@ $(function() {
 				</div>
 		
 		<br/><br/>
-		<!--<div class="row">
-		<div class="ui-widget form-group">
-			<div class="col-md-2"><h4 for="tags2">Destination</h4></div>
-			<div class="col-md-3"><input class="form-control" id="tags2"></div>
-		</div>
-		</div>-->
-		
-		
 			<div class="row">
 			<div class="ui-widget form-group">
 				<div class="col-md-2">
@@ -143,22 +104,6 @@ $(function() {
 			</div>
 		<br/><br/>
 		
-		
-		
-		
-			<!--<div class="row">
-			<div class="ui-widget form-group">
-				<div class="col-md-2">
-					<h4>Time</h4>
-				</div>
-			
-				<div class="col-md-4">
-					<div class="form-control-wrapper">
-						<input type="text" id="time" name="time" class="form-control floating-label" placeholder="">
-					</div>
-				</div>
-				</div>
-			</div>-->
 			<div class="row">
 			<div class="ui-widget form-group">
 				<div class="col-md-2">
@@ -217,7 +162,6 @@ $(function() {
 </div>
 <link rel="stylesheet" type="text/css" href="css/jquery.ptTimeSelect.css" />
 <link href="css/timepicki.css" rel="stylesheet">
-<link rel="stylesheet" href="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/css/material.min.css" />
 <script type="text/javascript" src="js/jquery.ptTimeSelect.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
