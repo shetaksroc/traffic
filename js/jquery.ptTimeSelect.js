@@ -97,7 +97,7 @@
      */
     jQuery.ptTimeSelect.options = {
         containerClass: undefined,
-        containerWidth: '22em',
+        containerWidth: '27em',
         hoursLabel:     'Hour',
         minutesLabel:   'Minutes',
         setButtonLabel: 'Set',
@@ -130,7 +130,7 @@
                         +    '                        onmouseover="jQuery(this).removeClass(\'ui-state-default\').addClass(\'ui-state-hover\');" '
                         +    '                        onmouseout="jQuery(this).removeClass(\'ui-state-hover\').addClass(\'ui-state-default\');"'
                         +    '                        class="ui-corner-all ui-state-default">'
-                        +    '                    <span class="ui-icon ui-icon-circle-close">X</span>'
+                        +    '                    <i class="fa fa-times-circle" aria-hidden="true"></i>'
                         +    '                </a>'
                         +    '            </div>'
                         +    '            <div id="ptTimeSelectUserTime" style="float: left;">'
@@ -147,13 +147,13 @@
                         +    '                    <div class="ptTimeSelectRightPane" style="width: 50%; text-align: center; float: left;">Minutes</div>'
                         +    '                </div>'
                         +    '                <div>'
-                        +    '                    <div style="float: left; width: 50%; ">'
+                        +    '                    <div style=" width: 50%;float:left; ">'
                         +    '                        <div class="ui-widget-content ptTimeSelectLeftPane">'
-                        +    '                            <div class="ptTimeSelectHrAmPmCntr">'
+                        +    '                            <div style="display: none;" class="ptTimeSelectHrAmPmCntr">'
                         +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);" '
-                        +    '                                        style="display: none; width: 45%; float: left;">AM</a>'
+                        +    '                                         width: 45%; float: left;">AM</a>'
                         +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);" '
-                        +    '                                        style="display: none; width: 45%; float: left;">PM</a>'
+                        +    '                                         width: 45%; float: left;">PM</a>'
                         +    '                                <br style="clear: left;" /><div></div>'
                         +    '                            </div>'
                         +    '                            <div class="ptTimeSelectHrCntr">'

@@ -14,13 +14,36 @@ include 'header.php';
 			var date = document.getElementById("date").value;
 			var time = document.getElementById("time").value;
 
-	  	$.post("send_json.php",{"route" : route, "date" : date , "time" : time}, function(data, status) {
-	           alert(data);
-	            data=String(data);
-	            $("#image").attr("src", data);
+			var person = { 'route' :route , 'date':date, 'time':time};
+        
+
+			  // show the loading message.
+    	$.ajax({
+        url: "send_json.php",
+        type: "POST",
+        //dataType: 'json',
+        data: person,
+        cache:false,
+        beforeSend: function() {
+    $('#loadingmessage').show();
+     $("#image").attr("src", "");
+  },
+        success : function(data){
+            //$(".content").html(html);
+            $('#loadingmessage').hide(); 
+             d = new Date();
+             $("#image").attr("src", data+"?"+d.getTime());
+
+        }
+    });
+
+	  	// $.post("send_json.php",{"route" : route, "date" : date , "time" : time}, function(data, status) {
+	   //         alert(data);
+	   //          data=String(data);
+	   //          $("#image").attr("src", data);
 	            
 
-	        });
+	   //      });
 
 	  }
 
@@ -40,7 +63,7 @@ include 'header.php';
   <div class="tab-content">
     <div  id="home" class="tab-pane fade in active">
 	  <div class="panel panel-info">
-      <form role="form" action="">
+      <!--<form role="form" action="">-->
       <div class="panel-body">
 	
 		<div class="row">
@@ -132,7 +155,9 @@ include 'header.php';
 		</form>
 	  </div>
 	  
-  
+  	<div id='loadingmessage' style='display:none; height: 200px; width: 200px;'>
+  <img src='images/ajax_loader2.gif'/>
+</div>
 	<!--<button onclick="fun1()">Click</button>-->
 	<img id="image" height="400" width="400"></img> 
 	<script>

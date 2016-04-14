@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+echo '
+<footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          
+        </div>
+        <strong>Copyright &copy; 2015-2016 <a href="#">Traffic Prediction</a>.</strong> All rights reserved.
+      </footer>
+      </div>
+      </body>
+	</html>
+      ';
 
-<head>
 
-</head>
 
-<body>
-<p>This is the Footer</p>
-</body>
-</html>
+?>
