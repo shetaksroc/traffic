@@ -1,5 +1,5 @@
 import cv2
-img=cv2.imread("demo.jpeg")
+img=cv2.imread("event_images/stadium.jpeg")
 for i in range(0,1200):
 	for j in range(0,1000):
 
@@ -20,4 +20,4 @@ for i in range(0,1200):
 			if(y>=100 and y<=255):
 				if(z>=176 and z<=255):
 					img[j,i]=[75,54,33]
-cv2.imwrite("out3.jpeg",img);					
+cv2.imwrite("event_images/stadium_o.jpeg",img);					
