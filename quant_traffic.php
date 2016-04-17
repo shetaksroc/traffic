@@ -4,34 +4,46 @@ include 'header.php';
 
 ?>
 <script>
+	// function fun11 () {
+	// 	var img=document.getElementById("image");
+ //      var sel = document.getElementById('menu');
+ //   	  var events = sel.options[sel.selectedIndex].value;
+ //      var date = document.getElementById("date").value;
+ //      var time = document.getElementById("time").value;
+ //      alert(events);
+		
+	// }
 
     function fun1()
     {
       var img=document.getElementById("image");
-      var e = document.getElementById("event_id");
-      var event = e.options[e.selectedIndex].value;
+      var sel = document.getElementById('menu');
+   	  var events = sel.options[sel.selectedIndex].value;
       var date = document.getElementById("date").value;
       var time = document.getElementById("time").value;
 
-      var person = { 'event' :event , 'date':date, 'time':time};
-        
+      var person = { 'events' :events , 'date':date, 'time':time};
+        //alert(person.event);
 
         // show the loading message.
       $.ajax({
         url: "send_json_events.php",
         type: "POST",
-        //dataType: 'json',
+        //	dataType: 'json',
         data: person,
         cache:false,
         beforeSend: function() {
     $('#loadingmessage').show();
-     $("#image").attr("src", "");
+    // $("#image").attr("src", "");
+   
   },
         success : function(data){
             //$(".content").html(html);
             $('#loadingmessage').hide(); 
-             d = new Date();
-             $("#image").attr("src", data+"?"+d.getTime());
+             //d = new Date();
+             //console.log(data);
+            // data=String(data);
+             $("#image").attr("src", String(data)); //
 
         }
     });
@@ -83,7 +95,7 @@ include 'header.php';
     <div class="col-md-2"><h4>Event</h4></div>
     <div class="col-md-4">
     <br>
-      <select id="event_id">
+      <select id="menu">
       <option value="0">--Select--</option>
       <option value="1">Bishop Cotton</option>
       <option value="2">Commercial Street</option>
