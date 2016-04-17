@@ -13,7 +13,7 @@ from sklearn.externals import joblib
 
 try:
     data =  json.loads(sys.argv[1])
-    #data=[2,1,1,6,0];
+    #data=[3,1,1,6,0];
     
 except:
     print "ERROR"
@@ -137,4 +137,4 @@ cv2.imwrite(final_img,img);
 #yellow=[0,122,244]
 
 res=str(final_img)
-print final_img
+print res
