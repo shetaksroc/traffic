@@ -13,7 +13,7 @@ from sklearn.externals import joblib
 
 try:
     data =  json.loads(sys.argv[1])
-    #data=[2,1,1,num,0];
+    #data=[2,1,1,6,0];
     
 except:
     print "ERROR"
