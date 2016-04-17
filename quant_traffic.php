@@ -3,23 +3,22 @@
 include 'header.php'; 
 
 ?>
-
-  <script>
+<script>
 
     function fun1()
     {
       var img=document.getElementById("image");
-      var e = document.getElementById("route");
-      var route = e.options[e.selectedIndex].value;
+      var e = document.getElementById("event_id");
+      var event = e.options[e.selectedIndex].value;
       var date = document.getElementById("date").value;
       var time = document.getElementById("time").value;
 
-      var person = { 'route' :route , 'date':date, 'time':time};
+      var person = { 'event' :event , 'date':date, 'time':time};
         
 
         // show the loading message.
       $.ajax({
-        url: "send_json.php",
+        url: "send_json_events.php",
         type: "POST",
         //dataType: 'json',
         data: person,
@@ -53,25 +52,24 @@ include 'header.php';
         height: 100%;
         width: 100%;
         overflow: hidden;
-        background-image: url('images/chose1.gif');
+        background-image: url('images/chose2.gif');
         background-position: center;
         background-repeat: no-repeat;
 
     }
 </style>
-  </head>
+</head>
   <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-      <?php
+    <?php
     include 'header_design.php';
-      ?>
-      <div class="content-wrapper">
-       
-    <div class="container-fluid">
-  <h2>Traffic Prediction</h2>
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Predicted Map</a></li>
+    ?>
+    <div class="content-wrapper">
+        <div class="container-fluid">
  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Traffic Prediction- Events</a></li>
+  <!-- <li><a data-toggle="tab" href="#menu1">Quantified Traffic Intensity</a></li>-->
   </ul>
 
   <div class="tab-content">
@@ -82,44 +80,18 @@ include 'header.php';
   
     <div class="row">
     <div class="ui-widget form-group">
-    <div class="col-md-2"><h4>Route</h4></div>
+    <div class="col-md-2"><h4>Event</h4></div>
     <div class="col-md-4">
     <br>
-      <select name="route" id="route" class="form-control floating-label">
-      <option selected="selected" value="null">Select Route</option>
-                    <?php
-                        $dbHost = 'localhost';
-            $dbUsername = 'root';
-            $dbPassword = 'root';
-            $dbName = 'traffic';
-            $con = mysqli_connect($dbHost,$dbUsername,$dbPassword,$dbName);
-            if (mysqli_connect_errno())
-            {
-            echo "Failed to connect to MySQL: " . mysqli_connect_error();
-            }
-            $sql = "SELECT src_dest,id FROM disp_src_dest ORDER BY id ASC";
-            
-            if ($result=mysqli_query($con,$sql))
-            {
-              
-            while ($row=mysqli_fetch_assoc($result))
-              {
-                ?>
-                
-                <option value="<?php echo $row['id'];?>"> <?php echo $row['src_dest'];?> </option>
-                <?php
-              }
-            
-            echo $select;
-            mysqli_free_result($result);
-            mysqli_close($con);
-            }
-          
-            
-            
-            ?>
-            
-            </select>
+      <select id="event_id">
+      <option value="0">--Select--</option>
+      <option value="1">Bishop Cotton</option>
+      <option value="2">Commercial Street</option>
+      <option value="3">Forum Mall</option>
+      <option value="4">Chinnaswamy Stadium</option>
+      <option value="5">Townhall</option>
+      
+    </select>
             </div>
         </div>
         </div>
@@ -170,21 +142,23 @@ include 'header.php';
     </div>
     </form>
     </div>
-
   <img id="image" /> 
 
     </div>
-
+  
+  
 
     </div>
   </div>
   <div class="json-overlay" id='loadingmessage' style='display:none;'>
   
   </div>
-  
-</div>
+    </div>
+
       <?php
 
-      include 'footer.php'; 
+    include 'footer.php'; 
 
       ?>
+
+    
