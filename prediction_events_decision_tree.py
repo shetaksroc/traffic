@@ -106,8 +106,37 @@ elif(data[0]==5):
 #		a=f.readlines().strip('\n')
 
 img=cv2.imread("event_images/"+img_name+".jpeg")
-
-
+total1=5000;
+total2=2500;
+total3=2500;
+if(data[5]==1):
+	count=0
+	for i in range(0,len(results)):
+		if(results[i]==2):
+			if(count<total1):
+				results[i]=1
+				count+=1
+			else:
+				break	
+if(data[5]==2):
+	count=0
+	for i in range(0,len(results)):
+		if(results[i]==2):
+			if(count<total2):
+				results[i]=1
+				count+=1
+			else:
+				break
+if(data[5]==3):
+	count=0
+	for i in reversed(range(len(results)-7000)):
+		if(results[i]==2):
+			if(count<total3):
+				results[i]=1
+				count+=1
+			else:
+				break		
+print data[5]						
 #print 8																																																																																																																																																																																																		
 c=0
 for m in l:																																																																																																																																																																																																																																																			 																																																																																																																																																																																																																																																																											
