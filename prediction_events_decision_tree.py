@@ -136,7 +136,7 @@ if(data[5]==3):
 				count+=1
 			else:
 				break		
-print data[5]						
+						
 #print 8																																																																																																																																																																																																		
 c=0
 for m in l:																																																																																																																																																																																																																																																			 																																																																																																																																																																																																																																																																											

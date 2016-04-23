@@ -45,7 +45,8 @@ include 'header.php';
              //d = new Date();
              //console.log(data);
             // data=String(data);
-             $("#image").attr("src", String(data)); //
+            d = new Date();
+             $("#image").attr("src", data+"?"+d.getTime()); //
 
         }
     });
