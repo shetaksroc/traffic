@@ -1,6 +1,6 @@
 <?php
 
-$event_id=intval($_POST['events']);
+$event_id=4;
 $date=explode('-',$_POST['date']);
 $time=explode(':',$_POST['time']);
 
