@@ -7,13 +7,13 @@ include 'header.php';
 
     function fun1()
     {
-      var img=document.getElementById("image");
-      var e = document.getElementById("event_id");
-      var event = e.options[e.selectedIndex].value;
+      var img = document.getElementById("image");
+      var e1 = document.getElementById("event_id");
+      var events = e1.options[e1.selectedIndex].value;
       var date = document.getElementById("date").value;
       var time = document.getElementById("time").value;
 
-      var person = { 'event' :event , 'date':date, 'time':time};
+      var person = { 'events' :events , 'date':date, 'time':time};
         
 
         // show the loading message.
@@ -44,7 +44,7 @@ include 'header.php';
   <style>
     .json-overlay {
         background-color: #333;
-        opacity: 0.9;
+        opacity: 0.98;
         position: absolute;
         left: 0px;
         top: 0px;
@@ -83,7 +83,7 @@ include 'header.php';
     <div class="col-md-2"><h4>Event</h4></div>
     <div class="col-md-4">
     <br>
-      <select id="event_id">
+      <select class="form-control" id="event_id">
       <option value="0">--Select--</option>
       <option value="1">Bishop Cotton</option>
       <option value="2">Commercial Street</option>

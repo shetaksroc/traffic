@@ -2,7 +2,7 @@
 echo '
 		<header class="main-header">
         <!-- Logo -->
-        <a href="index.html" class="logo">
+        <a href="dashboard.php" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>T</b>Pred</span>
           <!-- logo for regular state and mobile devices -->
@@ -53,7 +53,7 @@ echo '
                       <a href="profile.php" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="index.php" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="land1/index.php" class="btn btn-default btn-flat">Sign out</a>
                     </div>
                   </li>
                 </ul>
@@ -99,7 +99,7 @@ echo '
               </a>
               <ul class="treeview-menu">
                 <li><a href="map_form.php"><i class="fa fa-circle-o"></i>Get Map</a></li>
-                <li><a href="quant_traffic.php"><i class="fa fa-circle-o"></i>Quantified Traffic Intensity</a></li>
+                <li><a href="quant_traffic.php"><i class="fa fa-circle-o"></i>Traffic Prediction Events</a></li>
                 <li><a href="event_visual.php"><i class="fa fa-table"></i>Events Visualisation</a></li>
               </ul>
             </li>

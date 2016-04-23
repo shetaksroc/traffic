@@ -45,7 +45,7 @@ include 'header.php';
   <style>
     .json-overlay {
         background-color: #333;
-        opacity: 0.9;
+        opacity: 0.98;
         position: absolute;
         left: 0px;
         top: 0px;
@@ -85,7 +85,7 @@ include 'header.php';
     <div class="col-md-2"><h4>Route</h4></div>
     <div class="col-md-4">
     <br>
-      <select name="route" id="route" class="form-control floating-label">
+      <select name="route" id="route" class="form-control floating-label" required>
       <option selected="selected" value="null">Select Route</option>
                     <?php
                         $dbHost = 'localhost';
