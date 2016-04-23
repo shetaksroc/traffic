@@ -4,34 +4,56 @@ include 'header.php';
 
 ?>
 <script>
+	// function fun11 () {
+	// 	var img=document.getElementById("image");
+ //      var sel = document.getElementById('menu');
+ //   	  var events = sel.options[sel.selectedIndex].value;
+ //      var date = document.getElementById("date").value;
+ //      var time = document.getElementById("time").value;
+ //      alert(events);
+		
+	// }
 
     function fun1()
     {
+<<<<<<< HEAD
       var img = document.getElementById("image");
       var e1 = document.getElementById("event_id");
       var events = e1.options[e1.selectedIndex].value;
+=======
+      var img=document.getElementById("image");
+      var sel = document.getElementById('menu');
+   	  var events = sel.options[sel.selectedIndex].value;
+>>>>>>> 4d59284cd90697dad89cdb65ba657f211ae550f9
       var date = document.getElementById("date").value;
       var time = document.getElementById("time").value;
 
       var person = { 'events' :events , 'date':date, 'time':time};
+<<<<<<< HEAD
         
+=======
+        //alert(person.event);
+>>>>>>> 4d59284cd90697dad89cdb65ba657f211ae550f9
 
         // show the loading message.
       $.ajax({
         url: "send_json_events.php",
         type: "POST",
-        //dataType: 'json',
+        //	dataType: 'json',
         data: person,
         cache:false,
         beforeSend: function() {
     $('#loadingmessage').show();
-     $("#image").attr("src", "");
+    // $("#image").attr("src", "");
+   
   },
         success : function(data){
             //$(".content").html(html);
             $('#loadingmessage').hide(); 
-             d = new Date();
-             $("#image").attr("src", data+"?"+d.getTime());
+             //d = new Date();
+             //console.log(data);
+            // data=String(data);
+             $("#image").attr("src", String(data)); //
 
         }
     });
@@ -83,7 +105,11 @@ include 'header.php';
     <div class="col-md-2"><h4>Event</h4></div>
     <div class="col-md-4">
     <br>
+<<<<<<< HEAD
       <select class="form-control" id="event_id">
+=======
+      <select id="menu">
+>>>>>>> 4d59284cd90697dad89cdb65ba657f211ae550f9
       <option value="0">--Select--</option>
       <option value="1">Bishop Cotton</option>
       <option value="2">Commercial Street</option>
