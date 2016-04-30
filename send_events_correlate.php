@@ -14,7 +14,7 @@ $mn=$time[1];
 $week_day= date("N", strtotime($_POST['date']) )-1;
 $week_number =floor(($day - 1) / 7 + 1);
 
-$matc=array(2,7,11,14,18,24);
+$matc=array(2,7,12,11,14,17,18);
 $hrc=array(24,28,5,7,11);
 if (in_array($day, $matc) && in_array($day, $hrc)) {
     $prio=1;

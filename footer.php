@@ -7,9 +7,13 @@ echo '
       </div>
       <script>
     $("#time").ptTimeSelect();
-    
+    $("#time2").ptTimeSelect();
     $("#date").datepicker({ dateFormat: "yy-mm-dd" });
     $("#tform").submit(function(e) {
+    e.preventDefault();
+});
+
+  $("#tform1").submit(function(e) {
     e.preventDefault();
 });
     </script>

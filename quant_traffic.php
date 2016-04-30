@@ -106,7 +106,7 @@ include 'header.php';
       <option value="2">Commercial Street</option>
       <option value="3">Forum Mall</option>
       <option value="4">Chinnaswamy Stadium</option>
-      <option value="5">Townhall</option>
+      <!--<option value="5">Townhall</option>-->
       
     </select>
             </div>

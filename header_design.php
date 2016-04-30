@@ -101,6 +101,7 @@ echo '
                 <li><a href="map_form.php"><i class="fa fa-circle-o"></i>Get Map</a></li>
                 <li><a href="quant_traffic.php"><i class="fa fa-circle-o"></i>Traffic Prediction Events</a></li>
                 <li><a href="event_visual.php"><i class="fa fa-table"></i>Events Visualisation</a></li>
+                 <li><a href="event_correlate.php"><i class="fa fa-"></i>Event Correlation</a></li>
               </ul>
             </li>
             
