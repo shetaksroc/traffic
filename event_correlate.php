@@ -121,8 +121,8 @@ function fun2(event)
         <div class="container-fluid">
  
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">crikcet</a></li>
-   <li><a data-toggle="tab" href="#menu2">vs</a></li>
+    <li class="active"><a data-toggle="tab" href="#home">Cricket IPL 2016 Fever</a></li>
+   <li><a data-toggle="tab" href="#menu2">Event Correlation</a></li>
    
 
   </ul>
