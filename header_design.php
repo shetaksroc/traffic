@@ -43,7 +43,7 @@ echo '
                     <img src="images/manju.jpg" class="img-circle" alt="User Image">
                     <p>
                       Manjunath Gowda
-                      <small>something</small>
+                      <small></small>
                     </p>
                   </li>
                   
@@ -87,21 +87,21 @@ echo '
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span><i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="dashboard.php"><i class="fa fa-circle-o"></i>something</a></li>
-                <li><a href="dashboard.php"><i class="fa fa-circle-o"></i>something</a></li>
+                <li class="active"><a href="dashboard.php"><i class="fa fa-circle-o"></i>Chart Visualisation</a></li>
+                
               </ul>
             </li>
             
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-edit"></i> <span>Forms</span>
+                <i class="fa fa-edit"></i> <span>Prediction</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="map_form.php"><i class="fa fa-circle-o"></i>Get Map</a></li>
+                <li><a href="map_form.php"><i class="fa fa-circle-o"></i>Route Traffic Predcition</a></li>
                 <li><a href="quant_traffic.php"><i class="fa fa-circle-o"></i>Traffic Prediction Events</a></li>
                 <li><a href="event_visual.php"><i class="fa fa-table"></i>Events Visualisation</a></li>
-                 <li><a href="event_correlate.php"><i class="fa fa-"></i>Event Correlation</a></li>
+                 <li><a href="event_correlate.php"><i class="fa fa-circle-o"></i>Event Correlation</a></li>
               </ul>
             </li>
             
