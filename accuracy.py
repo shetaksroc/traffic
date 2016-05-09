@@ -1,5 +1,5 @@
 import csv
-with open("test2/test_o.csv") as csv_file:
+with open("test2/test_o_3.csv") as csv_file:
 	ec=0
 	tc=-1
 	for row in csv.reader(csv_file, delimiter=','):

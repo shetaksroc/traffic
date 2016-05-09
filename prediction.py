@@ -16,7 +16,7 @@ results = rf.predict(testArr)
 #result_f = open('result.txt', 'a')
 c=0
 with open('test2/test.csv','r') as csvinput:
-    with open('test2/test_o.csv', 'w') as csvoutput:
+    with open('test2/test_o_3.csv', 'w') as csvoutput:
         writer = csv.writer(csvoutput)
         reader= csv.reader(csvinput)
         for row in reader:
