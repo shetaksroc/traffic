@@ -14,7 +14,7 @@ include 'header.php';
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
-        <form action="../../index2.html" method="post">
+        <form action="map_form.php" method="post">
           <div class="form-group has-feedback">
             <input type="email" class="form-control" placeholder="Email">
             <span class="fa fa-envelope form-control-feedback"></span>
@@ -32,7 +32,7 @@ include 'header.php';
               </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+              <input type="submit" class="btn btn-primary btn-block btn-flat" value="Sign In" />
             </div><!-- /.col -->
           </div>
         </form>

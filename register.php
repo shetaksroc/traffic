@@ -16,7 +16,7 @@ include 'header.php';
 
       <div class="register-box-body">
         <p class="login-box-msg">Register a new membership</p>
-        <form action="" method="post" role="form">
+        <form action="login_final.php" method="post" role="form">
           <div class="form-group has-feedback">
             <input type="text" class="form-control" placeholder="Full name" autocomplete="off" required/>
             <span class="fa fa-user form-control-feedback"></span>
@@ -42,7 +42,7 @@ include 'header.php';
               </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+              <input type="submit" class="btn btn-primary btn-block btn-flat" value="Register" />
             </div><!-- /.col -->
           </div>
         </form>

@@ -58,6 +58,13 @@ include 'header.php';
         background-repeat: no-repeat;
 
     }
+     #mapimg
+  {
+    height:600px;
+    overflow: hidden;
+    //position: relative;
+  }
+  
 </style>
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
@@ -170,9 +177,9 @@ include 'header.php';
     </div>
     </form>
     </div>
-
+<div class="mapimg">
   <img id="image" /> 
-
+</div>
     </div>
 
 

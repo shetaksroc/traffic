@@ -50,10 +50,10 @@ echo '
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="profile.php" class="btn btn-default btn-flat">Profile</a>
+                      <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="land1/index.php" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="register.php" class="btn btn-default btn-flat">Sign out</a>
                     </div>
                   </li>
                 </ul>
@@ -82,12 +82,12 @@ echo '
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             
-            <li class="active treeview">
+            <li class="active">
               <a href="dashboard.php">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span><i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="dashboard.php"><i class="fa fa-circle-o"></i>Chart Visualisation</a></li>
+                <!--<li class="active"><a href="new_acc.php"><i class="fa fa-circle-o"></i>Accuracy Meter</a></li>-->
                 
               </ul>
             </li>
@@ -105,7 +105,7 @@ echo '
               </ul>
             </li>
             
-            <li><a href="documentation/index.php"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+            <li><a href="#"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
            
           </ul>
         </section>
